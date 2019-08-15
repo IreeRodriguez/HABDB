@@ -1,7 +1,7 @@
 import React from 'react';
 import { Nav, NavDropdown, Form, Button, Navbar, FormControl } from 'react-bootstrap';
 
-const NavBar = ({ src, title, onClick, counter, select }) => {
+const NavBar = () => {
   return (
     <Navbar bg="light" expand="lg" fixed="top">
     <Navbar.Brand href="#home">HABDB</Navbar.Brand>

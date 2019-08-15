@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Container } from 'react-bootstrap';
 
 class Allies extends Component {
     constructor(props) {
@@ -7,9 +8,16 @@ class Allies extends Component {
     }
     render() {
         return (
+            <Container className="sect">
+
             <div>
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eum recusandae qui distinctio consectetur vero necessitatibus numquam perferendis, debitis quae mollitia, molestiae officia doloremque nobis optio cumque nostrum? Distinctio, velit asperiores!
+                <h3>Logo Beagle</h3>
+                <h3>Logo UChile</h3>
+                <h3>Logo Subsecretaria</h3>
+                <h3>Logo Region de los ríos</h3>
+                <h3>Logo UAustral</h3>
             </div>
+            </Container>
         );
     }
 }
