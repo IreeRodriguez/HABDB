@@ -3,7 +3,7 @@ import { Nav, NavDropdown, Form, Button, Navbar, FormControl } from 'react-boots
 
 const NavBar = ({ src, title, onClick, counter, select }) => {
   return (
-    <Navbar bg="light" expand="lg">
+    <Navbar bg="light" expand="lg" fixed="top">
     <Navbar.Brand href="#home">HABDB</Navbar.Brand>
     <Navbar.Toggle aria-controls="basic-navbar-nav" />
     <Navbar.Collapse id="basic-navbar-nav">

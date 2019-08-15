@@ -4,6 +4,7 @@ import Footer from './Footer';
 import Project from './Project';
 import Allies from './Allies';
 import AboutUs from './AboutUs';
+import Search from './Search';
 
 class Home extends Component {
   constructor(src, title, onClick) {
@@ -33,6 +34,7 @@ class Home extends Component {
           counter={counter}
           select={select}
         />
+        <Search/>
 
         <Project/>
         <AboutUs/>
