@@ -4,18 +4,42 @@ import { Row, Col, InputGroup, FormControl, Button, Form } from 'react-bootstrap
 class Search extends Component {
     constructor(props) {
         super(props);
-        this.state = {};
+        this.state = {
+            input:'',
+
+        };
         this.handleSubmit = this.handleSubmit.bind(this);
+        this.handleChange = this.handleChange.bind(this);
     }
 
     handleSubmit(event) {
-        console.log('====================================');
-        console.log("submit");
-        console.log('====================================');
 
         event.preventDefault();
+        const url = `http://localhost:8000/species/${this.state.input}`
 
-      }
+        fetch(url)
+        .then(response => response.json())
+        .then(res => {
+            // this.props.history.push('/results')
+            this.props.history.push({
+                pathname: '/results',
+                state: {
+                    res
+                }
+              })
+        })
+            .catch(err => {
+                console.log("error:", err);
+            });
+
+    }
+
+    handleChange(e){
+        this.setState({
+            input: e.target.value
+        })
+
+    }
 
     render() {
         return (
@@ -24,7 +48,7 @@ class Search extends Component {
                     <Col>
                         <Form onSubmit={this.handleSubmit}>
 
-                            <InputGroup size="lg">
+                            <InputGroup size="lg" onChange={this.handleChange}>
                                 <FormControl
                                     placeholder="Proteins names"
                                     aria-label="Proteins names"

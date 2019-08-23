@@ -33,4 +33,13 @@ code {
   color: white !important;
 }
 
+.searchCards {
+  display: flex;
+  justify-content: center;
+  margin-top: 5em;
+}
+.bigCard{
+  width: 80% !important
+}
+
 

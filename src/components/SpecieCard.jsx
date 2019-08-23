@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { Card, Button, Collapse } from 'react-bootstrap';
 
-
 class SpecieCard extends Component {
     constructor(props) {
         super(props);
@@ -12,9 +11,6 @@ class SpecieCard extends Component {
     }
 
     handleToggleClick(event) {
-        console.log('====================================');
-        console.log(event);
-        console.log('====================================');
         this.setState({
             open: !this.state.open
         });

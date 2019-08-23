@@ -7,7 +7,9 @@ import AboutUs from './AboutUs';
 import Search from './Search';
 import SubSpecies from './SubSpecies';
 import { Navbar, Nav } from 'react-bootstrap';
-import { Link, Element } from 'react-scroll'
+import { Link, Element } from 'react-scroll';
+import { BrowserRouter as Router, Route } from "react-router-dom";
+import Results from './Results';
 
 class Home extends Component {
   constructor(src, title, onClick) {
@@ -33,7 +35,7 @@ class Home extends Component {
         /> */}
 
         <Navbar fixed="top" expand="lg">
-          <Navbar.Brand href="home" className="navItem">HABDB</Navbar.Brand>
+          <Navbar.Brand href="/" className="navItem">HABDB</Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav" >
             <Nav className="justify-content-end" style={{ width: "100%" }}>
@@ -67,25 +69,39 @@ class Home extends Component {
           </Navbar.Collapse>
 
         </Navbar>
+        <Router>
+          {/* <Redirect exact from="/" to="/home"></Redirect> */}
 
-        <Element name="search" className="search" >
-          <Search />
-        </Element>
+          <Route exact path='/' render={props =>
 
-        <Element name="species" className="species" >
-          <SubSpecies />
-        </Element>
+            <div>
 
-        <Element name="about" className="about" >
-          <AboutUs />
-        </Element>
+              <Element name="search" className="search" >
+                <Search {...props}/>
+              </Element>
 
-        <Element name="allies" className="allies" >
-          <Allies />
-        </Element>
+              <Element name="species" className="species" >
+                <SubSpecies />
+              </Element>
+
+              <Element name="about" className="about" >
+                <AboutUs />
+              </Element>
+
+              <Element name="allies" className="allies" >
+                <Allies />
+              </Element>
+            </div>
+
+          }
+          />
 
 
-        <Footer id="foot" />
+          <Route exact path="/results" component={Results} />
+
+          <Footer id="foot" />
+          {/* <Router> */}
+        </Router>
       </div>
     );
   }
