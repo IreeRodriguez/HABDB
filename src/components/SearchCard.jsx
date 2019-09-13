@@ -8,6 +8,10 @@ class SearchCard extends Component {
         this.state = {};
     }
     render() {
+        const {data} =  this.props;
+        console.log('====================================');
+        console.log(this.props.data);
+        console.log('====================================');
         return (
             <Container className="searchCards">
 
@@ -25,9 +29,9 @@ class SearchCard extends Component {
                             </ul> */}
                             </Card.Text>
                             <ListGroup className="list-group-flush">
-                                <ListGroupItem>HABDB ID:</ListGroupItem>
-                                <ListGroupItem>UNIPROT ID:</ListGroupItem>
-                                <ListGroupItem>PROTEIN NAME</ListGroupItem>
+                                <ListGroupItem>HABDB ID: {data.id}</ListGroupItem>
+                                <ListGroupItem>UNIPROT ID: {data.idUNIPROT}</ListGroupItem>
+                                <ListGroupItem>{data.annotation}</ListGroupItem>
                             </ListGroup>
                         </Card.Body>
                         <Card.Footer>

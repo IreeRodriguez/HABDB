@@ -13,20 +13,34 @@ class Search extends Component {
     }
 
     handleSubmit(event) {
-
         event.preventDefault();
-        const url = `http://localhost:8000/species/${this.state.input}`
+
+        if (!this.state.input) {
+            console.log(this.state.input);
+            console.log(event.target.value);
+            return
+
+        }
+        
+
+        const url = `http://localhost:8000/search/${this.state.input}`
 
         fetch(url)
         .then(response => response.json())
         .then(res => {
             // this.props.history.push('/results')
-            this.props.history.push({
-                pathname: '/results',
-                state: {
-                    res
-                }
-              })
+            console.log(res);
+
+            if (res.length > 0) {
+                
+                this.props.history.push({
+                    pathname: '/results',
+                    state: {
+                        res
+                    }
+                  })
+            }
+            
         })
             .catch(err => {
                 console.log("error:", err);
@@ -50,7 +64,7 @@ class Search extends Component {
 
                             <InputGroup size="lg" onChange={this.handleChange}>
                                 <FormControl
-                                    placeholder="Proteins names"
+                                    placeholder="UNIPROT ID, HABDB ID, Sequences, Annotations "
                                     aria-label="Proteins names"
                                     aria-describedby="basic-addon2"
                                 />

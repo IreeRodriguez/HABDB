@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Card, Button, Collapse } from 'react-bootstrap';
+import Chart from 'react-google-charts';
 
 class SpecieCard extends Component {
     constructor(props) {
@@ -17,7 +18,7 @@ class SpecieCard extends Component {
     }
 
     render() {
-        const { open } =  this.state;
+        const { open } = this.state;
         return (
             <Card style={{ borderColor: this.props.color }}>
 
@@ -30,9 +31,28 @@ class SpecieCard extends Component {
                 <Card.Footer>
                     <Button onClick={this.handleToggleClick.bind(this)}>Google Chart</Button>
                     <Collapse in={open}>
-                        <div id="example-collapse-text">
-                            Google chart here.
-                                </div>
+                        <div id="example-collapse-text" className="divChart" >
+                            <Chart className="chart"
+                              width={'500px'}
+                              height={'300px'}
+                                chartType="PieChart"
+                                legendToggle
+                                data={[
+                                    ['Task', 'Hours per Day'],
+                                    ['Annotated', 34360],
+                                    ['Hypothetical', 221],
+                                    ['Uncharacterized', 19160],
+                                    ['Un-annotated', 67860],
+                                    // ['Total', 121601],
+                                  ]}
+                                  options={{
+                                    titlePosition: 'none',
+                                    legend: 'none',
+                                    pieSliceText: 'label',
+                                    backgroundColor: 'none',
+                                  }}
+                            />
+                        </div>
                     </Collapse>
                 </Card.Footer>
             </Card>

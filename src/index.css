@@ -41,5 +41,18 @@ code {
 .bigCard{
   width: 80% !important
 }
+.divChart{
+  border: 2px solid red;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: stretch;
+  overflow:hidden;
+}
+.chart{
+  flex-grow: 1;
+        flex-basis:25%;
+}
+
 
 

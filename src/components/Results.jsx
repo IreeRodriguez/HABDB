@@ -13,7 +13,7 @@ class Results extends Component {
         return (
             <div>
                 {results.map((item, index) => {
-                   return <SearchCard key={item.id} title={item.name}/>
+                   return <SearchCard key={index} title={item.name} data={item}/>
 
                 })
                 }
