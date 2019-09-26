@@ -9,9 +9,6 @@ class SearchCard extends Component {
     }
     render() {
         const {data} =  this.props;
-        console.log('====================================');
-        console.log(this.props.data);
-        console.log('====================================');
         return (
             <Container className="searchCards">
 

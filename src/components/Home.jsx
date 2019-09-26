@@ -10,6 +10,7 @@ import { Navbar, Nav } from 'react-bootstrap';
 import { Link, Element } from 'react-scroll';
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import Results from './Results';
+import ResultsDetails from './ResultsDetails';
 
 class Home extends Component {
   constructor(src, title, onClick) {
@@ -98,6 +99,7 @@ class Home extends Component {
 
 
           <Route exact path="/results" component={Results} />
+          <Route exact path="/resultsDetails/:id/:idUNIPROT" component={ResultsDetails} />
 
           <Footer id="foot" />
           {/* <Router> */}

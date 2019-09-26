@@ -28,8 +28,6 @@ class Search extends Component {
         fetch(url)
         .then(response => response.json())
         .then(res => {
-            // this.props.history.push('/results')
-            console.log(res);
 
             if (res.length > 0) {
                 
