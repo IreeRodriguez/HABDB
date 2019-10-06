@@ -42,7 +42,7 @@ code {
   width: 80% !important
 }
 .divChart{
-  border: 2px solid red;
+
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -58,6 +58,18 @@ code {
   border: #0069d9 solid 1px;
   border-radius: 0.5em;
   padding: 0em 1em 1.5em 1em;
+}
+
+.cards {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+
+}
+
+.card {
+  margin: 1em;
 }
 
 

@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
-import { Container, CardDeck, } from 'react-bootstrap';
+import { Container } from 'react-bootstrap';
 import SpecieCard from './SpecieCard';
+import data from '../assets/data/speciesData.json';
 
 class SubSpecies extends Component {
     constructor(props) {
@@ -16,24 +17,23 @@ class SubSpecies extends Component {
         return (
             <Container className="sect">
 
-                    <SpecieCard title="Especie 1" color="blue"/>
-                <CardDeck>
+                
 
-                </CardDeck>
-                <CardDeck>
-                   
-                    <SpecieCard title="Especie 2" color="red"/>
-                    <SpecieCard title="Especie 3" color="green"/>
-                    <SpecieCard title="Especie 4" color="purple"/>
-                    <SpecieCard title="Especie 5" color="orange"/>
-                    <SpecieCard title="Especie 6" color="aqua"/>
-                    <SpecieCard title="Especie 7" color="aqua"/>
-                    <SpecieCard title="Especie 8" color="aqua"/>
-                    <SpecieCard title="Especie 9" color="aqua"/>
-                    <SpecieCard title="Especie 10" color="aqua"/>
-                    <SpecieCard title="Especie 11" color="aqua"/>
+                <div className="cards">
 
-                </CardDeck>
+                    {data.map((specie, i)=>{
+                        return <SpecieCard key={i} title={specie.Specie} 
+                        details={`Strain: ${specie.Strain}`}
+                        annotated={specie.Annotated}
+                        hypothetical={specie.Hypothetical}
+                        uncharacterized={specie.Uncharacterized}
+                        unannotated={specie.Unannotated}
+                        total={specie.Total}
+                        color="blue"    
+                        />
+                    })}
+                    
+                </div>
 
             </Container>
 

@@ -1,0 +1,102 @@
+[
+    {
+        "Specie": "Alexandrium catenella",
+        "Strain": "OF101",
+        "Annotated": 34360,
+        "Hypothetical": 221,
+        "Uncharacterized": 19160,
+        "Unannotated": 67860,
+        "Total": 121601
+    },
+    {
+        "Specie": "Alexandrium catenella",
+        "Strain": "Unclassifed",
+        "Annotated": 97437,
+        "Hypothetical": 670,
+        "Uncharacterized": 47679,
+        "Unannotated": 289714,
+        "Total": 435500
+    },
+    {
+        "Specie": "Alexandrium tamarense",
+        "Strain": "38-3",
+        "Annotated": 165,
+        "Hypothetical": 1,
+        "Uncharacterized": 41,
+        "Unannotated": 112,
+        "Total": 319
+    },
+    {
+        "Specie": "Alexandrium tamarense",
+        "Strain": "AtGTM253",
+        "Annotated": 37438,
+        "Hypothetical": 271,
+        "Uncharacterized": 21461,
+        "Unannotated": 85117,
+        "Total": 144287
+    },
+    {
+        "Specie": "Alexandrium tamarense",
+        "Strain": "AtSP1B",
+        "Annotated": 37009,
+        "Hypothetical": 265,
+        "Uncharacterized": 21551,
+        "Unannotated": 75150,
+        "Total": 133975
+    },
+    {
+        "Specie": "Alexandrium tamarense",
+        "Strain": "CCMP1598",
+        "Annotated": 111589,
+        "Hypothetical": 667,
+        "Uncharacterized": 47309,
+        "Unannotated": 449527,
+        "Total": 609092
+    },
+    {
+        "Specie": "Alexandrium tamarense",
+        "Strain": "CCMP1771",
+        "Annotated": 59138,
+        "Hypothetical": 435,
+        "Uncharacterized": 34350,
+        "Unannotated": 101678,
+        "Total": 195601
+    },
+    {
+        "Specie": "Amoebophrya sp",
+        "Strain": "Unclassifed",
+        "Annotated": 3625,
+        "Hypothetical": 36,
+        "Uncharacterized": 2553,
+        "Unannotated": 22086,
+        "Total": 28300
+    },
+    {
+        "Specie": "Dinophysis acuminata",
+        "Strain": "DAEP01",
+        "Annotated": 33840,
+        "Hypothetical": 226,
+        "Uncharacterized": 19116,
+        "Unannotated": 76895,
+        "Total": 130077
+    },
+    {
+        "Specie": "Protoceratium reticulatum",
+        "Strain": "CCCM535",
+        "Annotated": 36157,
+        "Hypothetical": 289,
+        "Uncharacterized": 19669,
+        "Unannotated": 64980,
+        "Total": 121095
+    },
+    {
+        "Specie": "Pseudo-nitzschia australis",
+        "Strain": "10249",
+        "Annotated": 8163,
+        "Hypothetical": 12,
+        "Uncharacterized": 10760,
+        "Unannotated": 18460,
+        "Total": 37395
+    }
+]
+

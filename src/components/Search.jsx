@@ -56,7 +56,7 @@ class Search extends Component {
     render() {
         return (
             <div className="bg">
-                <Row>
+                <Row className="bigInput">
                     <Col>
                         <Form onSubmit={this.handleSubmit}>
 
