@@ -20,7 +20,7 @@ class SubSpecies extends Component {
 
                     {data.map((specie, i)=>{
                         return <SpecieCard {...this.props} key={i} title={specie.Specie} 
-                        details={`Strain: ${specie.Strain}`}
+                        strain={specie.Strain}
                         annotated={specie.Annotated}
                         hypothetical={specie.Hypothetical}
                         uncharacterized={specie.Uncharacterized}

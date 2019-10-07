@@ -20,9 +20,11 @@ class SpecieCard extends Component {
             return
 
         }
+
+        const name = this.props.strain
         
 
-        const url = `http://localhost:8000/search/${this.state.input}`
+        const url = `http://localhost:8000/strains/${name}/?userquery=${this.state.input}`
 
         fetch(url)
         .then(response => response.json())
@@ -60,7 +62,7 @@ class SpecieCard extends Component {
                 <Card.Body>
                     <Card.Title>{this.props.title}</Card.Title>
                     <Card.Text>
-                        {this.props.details}
+                    Strain: {this.props.strain}
                     </Card.Text>
                     <div id="example-collapse-text" className="divChart" >
                         <Chart className="chart"
