@@ -16,13 +16,10 @@ class SubSpecies extends Component {
 
         return (
             <Container className="sect">
-
-                
-
                 <div className="cards">
 
                     {data.map((specie, i)=>{
-                        return <SpecieCard key={i} title={specie.Specie} 
+                        return <SpecieCard {...this.props} key={i} title={specie.Specie} 
                         details={`Strain: ${specie.Strain}`}
                         annotated={specie.Annotated}
                         hypothetical={specie.Hypothetical}
@@ -32,7 +29,6 @@ class SubSpecies extends Component {
                         color="blue"    
                         />
                     })}
-                    
                 </div>
 
             </Container>

@@ -48,9 +48,7 @@ class Results extends Component {
     }
 
     render() {
-        console.log('====================================');
-        console.log(this.state);
-        console.log('====================================');
+
         const { results } = this.state;
         return (
             <Container className="searchCards">

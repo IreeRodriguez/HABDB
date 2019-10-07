@@ -6,7 +6,7 @@ class SpecieCard extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            open: false
+            input:''
         };
         this.handleSubmit = this.handleSubmit.bind(this);
         this.handleChange = this.handleChange.bind(this);
@@ -16,8 +16,7 @@ class SpecieCard extends Component {
         event.preventDefault();
 
         if (!this.state.input) {
-            console.log(this.state.input);
-            console.log(event.target.value);
+
             return
 
         }

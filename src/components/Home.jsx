@@ -82,7 +82,7 @@ class Home extends Component {
               </Element>
 
               <Element name="species" className="species" >
-                <SubSpecies />
+                <SubSpecies {...props} />
               </Element>
 
               <Element name="about" className="about" >

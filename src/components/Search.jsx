@@ -16,8 +16,7 @@ class Search extends Component {
         event.preventDefault();
 
         if (!this.state.input) {
-            console.log(this.state.input);
-            console.log(event.target.value);
+    
             return
 
         }
