@@ -78,7 +78,7 @@ class Home extends Component {
             <div>
 
               <Element name="search" className="search" >
-                <Search {...props}/>
+                <Search {...props} />
               </Element>
 
               <Element name="species" className="species" >

@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-// import SearchCard from './SearchCard';
 import DataTable, { memoize } from 'react-data-table-component';
 import { Container, Button } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 
 const columns = memoize(clickHandler =>[
     {
@@ -21,11 +21,11 @@ const columns = memoize(clickHandler =>[
         sortable: true,
     },
     {
-        // name: 'Poster Link',
-        cell: row => <Button target="_blank" rel="noopener noreferrer" onClick={clickHandler} value={row.id}>More</Button>,
+ 
+        cell: row => <Link to={`/resultsDetails/${row.id}/${row.name}`}>More</Link>,
         ignoreRowClick: true,
         button: true
-      },
+      }
 ]);
 
 
@@ -36,15 +36,7 @@ class Results extends Component {
         this.state = {
             results: this.props.location.state.res
         };
-        this.handleClick = this.handleClick.bind(this);
-    }
-
-    handleClick(row) {
-        console.log('====================================');
-        console.log(row);
-        console.log(row.target);
-        console.log(row.target.value);
-        console.log('====================================');
+        // this.handleClick = this.handleClick.bind(this);
     }
 
     render() {
@@ -52,13 +44,6 @@ class Results extends Component {
         const { results } = this.state;
         return (
             <Container className="searchCards">
-                {/* {results.map((item, index) => {
-                    //    return <SearchCard key={index} title={item.name} data={item}/>
-                    return
-
-
-                })
-                } */}
 
                 <div className="customCard">
 
@@ -67,7 +52,7 @@ class Results extends Component {
                 
                 columns={columns(this.handleClick)}
                 data={results} defaultSortField="title"
-                onRowSelected={this.handleClick}
+                
 
                 />
 

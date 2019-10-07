@@ -37,6 +37,7 @@ code {
   display: flex;
   justify-content: center;
   margin-top: 5em;
+  /* min-height: 80vh; */
 }
 .bigCard{
   width: 80% !important
@@ -106,7 +107,7 @@ h2:after {
 footer {
   background-color: #2626269c;
   padding: 1em;
-  color: white
+  color: white;
 }
 
 .footImg img {
@@ -114,4 +115,7 @@ footer {
   margin: 1em 4em
 }
 
-
+td div {
+  word-wrap:break-word;
+  word-break:break-word;
+}

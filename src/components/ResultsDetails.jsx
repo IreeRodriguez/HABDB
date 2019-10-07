@@ -1,23 +1,6 @@
 import React, { Component } from 'react';
-
-
-// async function getTranscripts(component) {
-
-//     const state = component.state;
-  
-//     try {
-//       const patientRead = await fetch(url)
-//       .then(response => response.json())
-//         .then(res => {
-//             console.log(res);
-            
-//         });
-//     }
-//     catch (error) {
-//       //console.log('Error ocurred:');
-//       //console.log(error);
-//     }  
-//   }
+import SearchCard from './SearchCard';
+import { Container, Table, Col } from 'react-bootstrap';
 
 class ResultsDetails extends Component {
     constructor(props) {
@@ -26,6 +9,7 @@ class ResultsDetails extends Component {
         const { id } = params;
         const { idUNIPROT } = params;
         this.state = {
+
             id,
             idUNIPROT,
             loading: true
@@ -41,28 +25,96 @@ class ResultsDetails extends Component {
         console.log('====================================');
         console.log(el);
         console.log('====================================');
-        
-        const urlTranscrip = `http://localhost:8000/transcripts/${el.state.id}`
-        const urlUnicode = `http://localhost:8000/uniprot/${el.state.idUNIPROT}`
+
+        const urlTranscrip = `http://localhost:8000/transcripts/${el.state.id}`;
+        // const urlUnicode = `http://localhost:8000/uniprot/${el.state.idUNIPROT}`
         console.log(urlTranscrip);
-        console.log(urlUnicode);
+        // console.log(urlUnicode);
 
         Promise.all([
-            fetch(urlTranscrip),
+            fetch(urlTranscrip).then(response => response.json()),
             // fetch(urlUnicode),
-        ])
+        ]).then(res => {
+
+            console.log(res)
+
+            if (res.length > 0) {
+
+                this.setState({
+                    HABDB: res[0][0],
+                    loading: false
+                })
+            }
+
+
+        })
+            .catch(err => {
+                console.log("error:", err);
+            });
 
     }
 
 
 
     render() {
-        console.log(this.state);
+        const { HABDB } = this.state;
+        const { loading } = this.state;
+        console.log('====================================');
+        console.log(HABDB);
+        console.log(loading);
+        console.log('====================================');
 
         return (
-            <div>
-                Results Details
-            </div>
+            <Container className="searchCards">
+                {/* <SearchCard title={HABDB}/> */}
+
+                {loading ? null : (
+                    <Container>
+                        <Col>
+                        <h3>   </h3>
+                        <Table striped bordered hover size="sm">
+                            <tbody>
+                                <tr>
+                                    <td>HABDBid:</td>
+                                    <td>{HABDB.id}</td>
+
+                                </tr>
+                                <tr>
+                                    <td>Strains Id:</td>
+                                    <td>{HABDB.Strains_id}</td>
+                                </tr>
+                                <tr>
+                                    <td>Annotation:</td>
+                                    <td>{HABDB.annotation}</td>
+                                </tr>
+                                <tr>
+                                    <td>idUNIPROT:</td>
+                                    <td>{HABDB.idUNIPROT}</td>
+                                </tr>
+                                <tr>
+                                    <td>Sequence:</td>
+                                    <td >
+                                        <div className="longWord">
+                                    {HABDB.sequence}
+
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Size:</td>
+                                    <td >{HABDB.size}</td>
+                                </tr>
+                            </tbody>
+
+                        </Table>
+                        </Col>
+
+                    </Container>
+
+
+
+                )}
+            </Container>
         );
     }
 }
