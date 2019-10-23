@@ -9,6 +9,7 @@ class AboutUs extends Component {
     render() {
         return (
             <Container className="sect">
+                <h2>About us</h2>
 
                 <div>
                     Lorem ipsum dolor sit amet consectetur, adipisicing elit. Obcaecati rem, numquam iusto totam dolore ipsum autem quibusdam veniam animi dolorem illum. Eaque numquam quidem voluptatum aut a laudantium quas repellat!

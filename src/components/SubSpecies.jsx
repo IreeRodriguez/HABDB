@@ -16,6 +16,7 @@ class SubSpecies extends Component {
 
         return (
             <Container className="sect">
+                <h2>Sub species</h2>
                 <div className="cards">
 
                     {data.map((specie, i)=>{
@@ -26,7 +27,7 @@ class SubSpecies extends Component {
                         uncharacterized={specie.Uncharacterized}
                         unannotated={specie.Unannotated}
                         total={specie.Total}
-                        color="blue"    
+                        color="#1DAFEC"    
                         />
                     })}
                 </div>

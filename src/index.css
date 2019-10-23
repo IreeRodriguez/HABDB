@@ -35,8 +35,10 @@ code {
 
 .searchCards {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   margin-top: 5em;
+  align-items: center;
   /* min-height: 80vh; */
 }
 .bigCard{
@@ -56,9 +58,11 @@ code {
 }
 
 .customCard {
-  border: #0069d9 solid 1px;
-  border-radius: 0.5em;
+  /* border: #0069d9 solid 1px;
+  border-radius: 0.5em; */
   padding: 0em 1em 1.5em 1em;
+  width: 90%;
+  margin-top: 2em;
 }
 
 .cards {
@@ -89,13 +93,13 @@ h2 {
   justify-content: center;
   align-items: center;
   text-align: center;
-  color: #0069d9
+  color: #1DAFEC
 }
 
 h2:before,
 h2:after {
   content: '';
-  border-top: 3px  #0069d9 solid;
+  border-top: 3px  #1DAFEC solid;
   margin: 0 1em 0 0;
   flex: 1 0 1em;
 }
@@ -116,6 +120,35 @@ footer {
 }
 
 td div {
+  word-wrap:break-word; 
+  word-break:break-word;
+}
+.cell{
   word-wrap:break-word;
   word-break:break-word;
+  white-space: break-spaces;
+}
+
+button {
+   background-color: #1DAFEC !important;
+   border-color: none !important;
+   color: white !important;
+}
+
+button:hover {
+  background-color: #00b3ff !important;
+   border-color: none !important;
+   color: white !important;
+}
+
+
+ .btn-primary {
+  border-color: none !important;
+ }
+
+.rt-td, .rt-th {
+  padding: 0.7em !important;
+  word-wrap:break-word;
+  word-break:break-word;
+  white-space: break-spaces !important  ;
 }
