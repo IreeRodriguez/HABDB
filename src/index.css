@@ -27,7 +27,7 @@ code {
   margin-top: 2em;
 }
 .navbar{
-  background-color: rgba(50,50,50,0.5);
+  background-color: rgba(20, 20, 20, 0.5);
 }
 .navItem {
   color: white !important;
@@ -151,4 +151,12 @@ button:hover {
   word-wrap:break-word;
   word-break:break-word;
   white-space: break-spaces !important  ;
+}
+
+.nav-link {
+  cursor: pointer;
+}
+
+.pad {
+  padding-top: 2em;
 }

@@ -1,7 +1,5 @@
 import React, { Component } from 'react';
-// import NavBar from './NavBar';
 import Footer from './Footer';
-// import Project from './Project';
 import Allies from './Allies';
 import AboutUs from './AboutUs';
 import Search from './Search';
@@ -40,30 +38,30 @@ class Home extends Component {
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav" >
             <Nav className="justify-content-end" style={{ width: "100%" }}>
-              <Nav.Link href="#search">
+              <Nav href="#search" className="nav-link">
                 <Link
                   activeClass="active" className="search navItem" to="search" spy={true} smooth={true} duration={1000} >
                   Search
                 </Link>
-              </Nav.Link>
-              <Nav.Link href="#species">
+              </Nav>
+              <Nav href="#species" className="nav-link">
                 <Link
                   activeClass="active" className="species navItem" to="species" spy={true} smooth={true} duration={1000} >
                   Sub Species
                 </Link>
-              </Nav.Link>
-              <Nav.Link href="#about">
+              </Nav>
+              <Nav href="#about" className="nav-link">
                 <Link
                   activeClass="active" className="about navItem" to="about" spy={true} smooth={true} duration={1000} >
                   About Us
                 </Link>
-              </Nav.Link>
-              <Nav.Link href="#allies">
+              </Nav>
+              <Nav href="#allies" className="nav-link">
                 <Link
                   activeClass="active" className="allies navItem" to="allies" spy={true} smooth={true} duration={1000} >
                   Allies
                 </Link>
-              </Nav.Link>
+              </Nav>
 
 
             </Nav>
@@ -82,15 +80,24 @@ class Home extends Component {
               </Element>
 
               <Element name="species" className="species" >
+              <div className="pad">
+
                 <SubSpecies {...props} />
+              </div>
               </Element>
 
               <Element name="about" className="about" >
+              <div className="pad">
                 <AboutUs />
+
+              </div>
               </Element>
 
               <Element name="allies" className="allies" >
-                <Allies />
+                <div className="pad">
+                  <Allies />
+
+                </div>
               </Element>
             </div>
 

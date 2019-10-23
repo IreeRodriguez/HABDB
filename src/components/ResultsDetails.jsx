@@ -21,7 +21,9 @@ class ResultsDetails extends Component {
         };
     }
 
-    componentWillMount() {
+    
+
+    componentDidMount() {
         this.getTranscripts(this);
     }
 
@@ -42,7 +44,7 @@ class ResultsDetails extends Component {
                     for (const key in obj) {
                         if (obj.hasOwnProperty(key)) {
                             const element = obj[key];
-                            
+
                             this.state.data.push({
                                 title: key,
                                 detail: element
