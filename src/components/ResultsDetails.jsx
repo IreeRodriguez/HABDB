@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Container } from 'react-bootstrap';
+import { Container , Spinner} from 'react-bootstrap';
 import ReactTable from "react-table";
 
 
@@ -107,7 +107,9 @@ class ResultsDetails extends Component {
         return (
             <Container className="searchCards">
                 <h2>Details</h2>
-                {loading && loadingUni? null : (
+                {loading && loadingUni? (
+                    <Spinner animation="grow" variant="primary" />
+                ) : (
                     <div className="customCard">
 
                         <ReactTable
